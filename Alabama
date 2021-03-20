@@ -1,0 +1,34 @@
+package hack.a.thon;
+import java.util.Scanner; 
+/**
+ *
+ * @author athle
+ */
+public class HackAThon {
+   public static int countOccurences(String str, String word)  {
+    String a[] = str.split(" ");
+    int count = 0;
+    for (int i = 0; i < a.length; i++) {
+        if (word.equals(a[i]))
+            count++; 
+    }
+    return count; 
+   }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        System.out.println("How many championships has Alabama won since 2009? ");
+        String str = "Alabama LSU, Clemson, Alabama Clemson, Alabama Ohio State\n" +
+                "Florida State, Alabama Alabama Auburn, Alabama";
+               
+                
+         String word = "Alabama";
+        System.out.println(countOccurences(str, word));        
+                
+        
+    }
+    
+}
